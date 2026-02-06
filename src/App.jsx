@@ -569,7 +569,7 @@ function App() {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/asmithachandinitg"
             target="_blank"
             rel="noreferrer"
             className="skill-card"
@@ -621,7 +621,7 @@ function App() {
 
             {/* GitHub */}
             <a
-              href="https://github.com/YOUR-USERNAME"
+              href="https://github.com/asmithachandinitg"
               target="_blank"
               rel="noopener noreferrer"
               className="icon github"
