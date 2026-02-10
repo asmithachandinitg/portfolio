@@ -1,15 +1,4 @@
 /* RESET HERO ALIGNMENT */
-.hero-center {
-  height: 100vh;
-  background: #f8f9fb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 70px;
-  font-family: "Inter", sans-serif;
-}
 
 /* HERO TEXT */
 .intro {
@@ -77,7 +66,7 @@
 
 .primary {
   background: #b57cff;
-    border: 1px solid #533679;
+  border: 1px solid #533679;
   color: #fff;
   padding: 12px 26px;
   border: none;
@@ -307,7 +296,7 @@
 }
 
 .contact-roles {
-   font-weight: 500;
+  font-weight: 500;
   color: black;
   margin-bottom: 10px;
 }
@@ -762,7 +751,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;   /* adjusted */
+  padding: 25px 50px;
+  /* adjusted */
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -865,13 +855,6 @@
   padding-bottom: 80px !important;
 }
 
-/* Hero → About gap reduce */
-
-.hero-center {
-  min-height: 85vh;
-  /* was 100vh */
-  padding-bottom: 40px;
-}
 
 /* Timeline spacing tighten slightly */
 
@@ -939,10 +922,13 @@ html {
   height: 100vh;
   background: #f8f9fb;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
+  padding-top: 70px;
+  font-family: "Inter", sans-serif;
+  min-height: 85vh;
 }
 
 /* Content above animation */
@@ -959,7 +945,9 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Floating circles */
@@ -1012,9 +1000,11 @@ html {
   0% {
     transform: translateY(0px) scale(1);
   }
+
   50% {
     transform: translateY(-120px) scale(1.2);
   }
+
   100% {
     transform: translateY(0px) scale(1);
   }
@@ -1028,7 +1018,8 @@ html {
   margin-bottom: 25px;
 
   /* FIX MOVEMENT */
-  min-height: 80px;        /* locks height */
+  min-height: 80px;
+  /* locks height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1046,8 +1037,17 @@ html {
 /* Blink animation */
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 /* ===== RESPONSIVE HERO TEXT ===== */
@@ -1091,7 +1091,7 @@ html {
 
 .publication-link {
   text-decoration: underline;
-  text-underline-offset: 6px;   /* gap */
+  text-underline-offset: 6px;
   text-decoration-thickness: 2px;
   color: #b57cff;
   font-weight: 500;

@@ -102,7 +102,11 @@ function App() {
     <div>
       {/* NAVBAR */}
       <nav className="navbar">
-        <div className="nav-logo">  <img src="/ac.png" alt="profile" className="about-photo" /> Asmitha Chandini</div>
+        <div className="nav-logo">
+          {" "}
+          <img src="/ac.png" alt="profile" className="about-photo" /> Asmitha
+          Chandini
+        </div>
 
         <ul className="nav-links">
           <li>
@@ -112,10 +116,14 @@ function App() {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience" onClick={() => setActiveTab("experience")}>
+              Education
+            </a>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <a href="#education" onClick={() => setActiveTab("education")}>
+              Education
+            </a>
           </li>
           <li>
             <a href="#skills">Skills</a>
@@ -144,17 +152,26 @@ function App() {
         </h1>
 
         <div className="buttons">
-          <a href="/Asmitha chandini_Front end Developer.pdf" download>
+          {/* DOWNLOAD */}
+          <a href="/resume.pdf" download="Asmitha_Chandini_Resume.pdf">
             <button className="primary">Download Resume</button>
           </a>
 
+          {/* CONTACT SCROLL */}
           <button
             className="secondary"
-            onClick={() =>
-              document
-                .getElementById("contact")
-                .scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => {
+              const section = document.getElementById("contact");
+              if (section) {
+                const yOffset = -100;
+                const y =
+                  section.getBoundingClientRect().top +
+                  window.pageYOffset +
+                  yOffset;
+
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
           >
             Contact Me
           </button>
@@ -233,14 +250,11 @@ function App() {
         {/* EXPERIENCE */}
         {activeTab === "experience" && (
           <div className="timeline">
-            
-            <div className="timeline-item" onClick={() =>
-    window.open(
-      "https://www.quenext.com/",
-      "_blank"
-    )
-  }
-  style={{ cursor: "pointer" }}>
+            <div
+              className="timeline-item"
+              onClick={() => window.open("https://www.quenext.com/", "_blank")}
+              style={{ cursor: "pointer" }}
+            >
               <h4>Quenext Decision Science Technology Pvt Ltd</h4>
               <p className="role">Frontend Developer / Team Lead</p>
 
@@ -281,13 +295,13 @@ function App() {
               </div>
             </div>
 
-            <div className="timeline-item" onClick={() =>
-    window.open(
-      "https://www.creativeos.com/",
-      "_blank"
-    )
-  }
-  style={{ cursor: "pointer" }}>
+            <div
+              className="timeline-item"
+              onClick={() =>
+                window.open("https://www.creativeos.com/", "_blank")
+              }
+              style={{ cursor: "pointer" }}
+            >
               <h4>CreativeOS</h4>
               <p className="role">Frontend Developer</p>
 
@@ -329,13 +343,11 @@ function App() {
               </div>
             </div>
 
-            <div className="timeline-item" onClick={() =>
-    window.open(
-      "https://www.profit.co/",
-      "_blank"
-    )
-  }
-  style={{ cursor: "pointer" }}>
+            <div
+              className="timeline-item"
+              onClick={() => window.open("https://www.profit.co/", "_blank")}
+              style={{ cursor: "pointer" }}
+            >
               <h4>Profit.co</h4>
               <p className="role">Full stack Developer</p>
 
@@ -380,13 +392,11 @@ function App() {
         {/* EDUCATION */}
         {activeTab === "education" && (
           <div id="education" className="timeline">
-            <div className="timeline-item" onClick={() =>
-    window.open(
-      "https://www.klnce.edu/",
-      "_blank"
-    )
-  }
-  style={{ cursor: "pointer" }}>
+            <div
+              className="timeline-item"
+              onClick={() => window.open("https://www.klnce.edu/", "_blank")}
+              style={{ cursor: "pointer" }}
+            >
               <h4>KLN College of Engineering</h4>
               <p className="role">
                 Master of Engineering (Computer Science and Engineering)
@@ -407,30 +417,33 @@ function App() {
                 Published research in MANET simulation models.
               </p>
 
-              <p className="desc" >
+              <p className="desc">
                 Research Paper:{" "}
                 <b>
                   "Multi-Radio Mobile Node Simulation Model in MANET using AODV
                   Protocol"{" "}
                 </b>
                 Published in International Journal of Scientific Development and
-                Research <b>(IJSDR)</b>, May 2022  <a onClick={() =>
-    window.open(
-      "https://www.ijsdr.org/papers/IJSDR2205118.pdf",
-      "_blank"
-    )
-  }
-  className="publication-link">Publication link</a>
+                Research <b>(IJSDR)</b>, May 2022{" "}
+                <a
+                  onClick={() =>
+                    window.open(
+                      "https://www.ijsdr.org/papers/IJSDR2205118.pdf",
+                      "_blank",
+                    )
+                  }
+                  className="publication-link"
+                >
+                  Publication link
+                </a>
               </p>
             </div>
 
-            <div className="timeline-item" onClick={() =>
-    window.open(
-      "https://www.klnce.edu/",
-      "_blank"
-    )
-  }
-  style={{ cursor: "pointer" }}>
+            <div
+              className="timeline-item"
+              onClick={() => window.open("https://www.klnce.edu/", "_blank")}
+              style={{ cursor: "pointer" }}
+            >
               <h4>KLN College of Engineering</h4>
               <p className="role">
                 Bachelor of Technology (Information Technology)
