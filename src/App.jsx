@@ -117,7 +117,7 @@ function App() {
           </li>
           <li>
             <a href="#experience" onClick={() => setActiveTab("experience")}>
-              Education
+              Experience
             </a>
           </li>
           <li>
@@ -135,29 +135,68 @@ function App() {
       </nav>
 
       {/* HERO */}
+      {/* ================= HERO ================= */}
       <section id="home" className="hero-center">
-        {/* ===== Animated Background ===== */}
+        {/* ===== BACKGROUND ===== */}
         <div className="hero-bg">
-          <span></span>
-          <span></span>
+          <div className="grid"></div>
+
+          <div className="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
 
+        {/* ===== NAME ===== */}
+        {/* <h2 className="hero-name">Asmitha Chandini</h2> */}
+
+        {/* ===== INTRO ===== */}
         <p className="intro">
           Hello, I’m Asmitha Chandini. A passionate Software Engineer.
         </p>
 
+        {/* ===== ROLE TYPING ===== */}
         <h1 className="title">
           {typedText}
           <span className="cursor">|</span>
         </h1>
 
+        {/* ===== SPECIALIZATION ===== */}
+        {/* <p className="hero-specialization">
+    Building Data Visualization & Forecasting Platforms
+  </p> */}
+
+        {/* ===== STATS ===== */}
+        <div className="hero-stats">
+          <span>3+ Years Experience</span>
+          <span>Frontend Focused Developer</span>
+          <span>Enterprise Application Developer</span>
+          <span>Product Development Experience</span>
+        </div>
+
+        {/* ===== STACK ===== */}
+        <div className="hero-stack">
+          <span>React</span>
+          <span>Angular</span>
+          <span>TypeScript</span>
+          <span>D3.js</span>
+          <span>Java</span>
+        </div>
+
+        {/* ===== META ===== */}
+        <div className="hero-meta">
+          📍 Bangalore, India &nbsp; | &nbsp; 🟢 Open to Frontend & Full Stack
+          Opportunities Worldwide
+        </div>
+
+        {/* ===== BUTTONS ===== */}
         <div className="buttons">
-          {/* DOWNLOAD */}
           <a href="/resume.pdf" download="Asmitha_Chandini_Resume.pdf">
             <button className="primary">Download Resume</button>
           </a>
 
-          {/* CONTACT SCROLL */}
           <button
             className="secondary"
             onClick={() => {
@@ -176,55 +215,87 @@ function App() {
             Contact Me
           </button>
         </div>
+
+        {/* ===== SOCIALS ===== */}
+        <div className="contact-icons">
+          <a
+            href="https://www.linkedin.com/in/asmitha-chandini-tg"
+            target="_blank"
+            rel="noreferrer"
+            className="icon linkedin"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://github.com/asmithachandinitg"
+            target="_blank"
+            rel="noreferrer"
+            className="icon github"
+          >
+            <FaGithub />
+          </a>
+        </div>
       </section>
 
       {/* ABOUT */}
       <section id="about" className="about-section">
-        <div className="about-card">
-          {/* HEADER */}
-          <div className="about-header">
-            <img src="/profile.png" alt="profile" className="about-photo" />
+        <div className="about-container">
+          {/* ===== LEFT PROFILE ===== */}
+          <div className="about-left">
+            <img
+              src="/profile.png"
+              alt="profile"
+              className="about-photo-large"
+            />
 
-            <div className="about-intro">
-              <h3>Asmitha Chandini</h3>
-              <h6>Frontend Developer</h6>
-            </div>
+            <h3>Asmitha Chandini</h3>
+            <p className="about-role">Frontend & Full Stack Developer</p>
           </div>
 
-          {/* GREETING */}
-          <h2 className="about-greeting">{greeting}</h2>
+          {/* ===== RIGHT CONTENT ===== */}
+          <div className="about-right">
+            {/* BIO */}
+            <p className="about-bio">
+              Frontend Developer with 3+ years of experience building scalable
+              enterprise dashboards and forecasting platforms. Specialized in
+              React, Angular, and data visualization with strong backend
+              understanding in Java and microservices architecture.
+            </p>
 
-          {/* DESCRIPTION */}
-          <p className="about-desc">
-            I am a Frontend Developer with 3+ years of experience in the IT
-            industry, with a strong understanding of backend systems. I have
-            worked extensively on Angular (v15 & v18) and React, building
-            scalable, responsive, and high-performance user interfaces for
-            modern web applications.
-            <br />
-            <br />
-            Along with frontend development, I have 2 years of hands-on
-            experience working with Java and a solid understanding of
-            Microservices architecture, which enables me to collaborate
-            effectively with backend teams and design well-integrated frontend
-            solutions.
-            <br />
-            <br />
-            I have strong experience in integrating REST APIs, state management,
-            performance optimization, and API testing using Postman. My
-            technical skill set includes Angular, React, Vue.js, TypeScript,
-            RxJS, JavaScript, HTML, CSS, Java, along with Git/GitHub.
-            <br />
-            <br />
-            I have worked in startup environments, handling multiple projects
-            simultaneously, taking end-to-end ownership of features, and serving
-            as a Team Lead — mentoring team members, reviewing code, and
-            ensuring timely, high-quality delivery.
-            <br />
-            <br />I am actively seeking frontend-focused roles where I can
-            leverage my strong UI expertise, backend understanding, and
-            leadership skills to build reliable, user-centric applications.
-          </p>
+            {/* HIGHLIGHT CARDS */}
+            <div className="about-highlights">
+              <div className="highlight-card">
+                <h4>Experience</h4>
+                <p>3+ Years building enterprise web applications</p>
+              </div>
+
+              <div className="highlight-card">
+                <h4>Specialization</h4>
+                <p>Forecasting & Data Visualization Platforms</p>
+              </div>
+
+              <div className="highlight-card">
+                <h4>Tech Stack</h4>
+                <p>React • Angular • TypeScript • Java</p>
+              </div>
+
+              <div className="highlight-card">
+                <h4>Collaboration</h4>
+                <p>Cross-functional product development</p>
+              </div>
+            </div>
+
+            {/* TECH BADGES */}
+            <div className="about-tech">
+              {/* <span>React</span>
+        <span>Angular</span>
+        <span>TypeScript</span>
+        <span>D3.js</span>
+        <span>Java</span>
+        <span>Spring Boot</span> */}
+            </div>
+          </div>
         </div>
       </section>
 
