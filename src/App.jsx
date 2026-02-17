@@ -126,6 +126,11 @@ function App() {
             </a>
           </li>
           <li>
+            <a href="#projects" onClick={() => setActiveTab("projects")}>
+              Projects
+            </a>
+          </li>
+          <li>
             <a href="#skills">Skills</a>
           </li>
           <li>
@@ -315,6 +320,13 @@ function App() {
             onClick={() => setActiveTab("education")}
           >
             Education
+          </button>
+
+          <button
+            className={activeTab === "projects" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("projects")}
+          >
+            Projects
           </button>
         </div>
 
@@ -532,6 +544,125 @@ function App() {
               </p>
 
               <p className="desc">Built academic full-stack web projects.</p>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "projects" && (
+          <div id="projects" className="timeline">
+            <div
+              className="timeline-item"
+            >
+              <h4>Personal Portfolio</h4>
+              <p className="desc">
+                Designed and developed a responsive personal portfolio using
+                React, enhancing user engagement and experience.
+              </p>
+
+              <p className="desc">
+                Showcased a comprehensive selection of projects, skills, and
+                contact information, offering a professional online presence.
+              </p>
+              <p className="desc">
+                Implemented live deployment, ensuring seamless access to the
+                portfolio across devices and platforms.{" "}
+              </p>
+              <p className="desc">
+                Integrated GitHub for version control and project showcasing,
+                highlighting technical capabilities and collaboration skills.
+              </p>
+                <div className="project-links">
+          <a href="https://your-portfolio-link.com" target="_blank">
+            Live Demo
+          </a>
+          <a href="https://github.com/asmithachandinitg/portfolio" target="_blank">
+            GitHub
+          </a>
+        </div>
+                 <div className="exp-skills">
+                   <span>React</span>
+                <span>JavaScript</span>
+                <span>GitHub</span>
+              </div>
+            </div>
+
+            <div
+              className="timeline-item"
+              style={{ cursor: "pointer" }}
+            >
+              <h4>OTT Video Streaming App</h4>
+
+              <p className="desc">
+                Developed a Netflix-style OTT platform, enhancing user
+                experience with categorized video browsing.
+              </p>
+              <p className="desc">
+                Implemented dynamic routing for seamless navigation within the
+                application.
+              </p>
+              <p className="desc">
+                Integrated HTML5 video playback to ensure high-quality streaming
+                on various devices.
+              </p>
+              <p className="desc">
+                Utilized React and JSON datasets to deliver an efficient and
+                responsive user interface.
+              </p>
+          
+             <div className="project-links">
+          <a href="https://your-video-app-link.com" target="_blank">
+            Live Demo
+          </a>
+          <a href="https://github.com/asmithachandinitg/video-player-assignment" target="_blank">
+            GitHub
+          </a>
+        </div>
+                 <div className="exp-skills">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>GitHub</span>
+              </div>
+            </div>
+            <div
+              className="timeline-item"
+              
+            >
+              <h4>Dynamic Resume Builder</h4>
+
+              <p className="desc">
+                Developed a dynamic Resume Builder, enhancing the job
+                application process for users.
+              </p>
+              <p className="desc">
+                Implemented multi-section forms to allow comprehensive resume
+                creation tailored to individual needs.
+              </p>
+              <p className="desc">
+                Built a live preview feature, providing real-time feedback and
+                improving user experience during the editing process.
+              </p>
+              <p className="desc">
+                Utilized React state management for seamless data handling,
+                ensuring a responsive and efficient application.
+              </p>
+              <p className="desc">
+                Designed customizable layouts, enabling users to personalize
+                their resumes for various industries and positions.
+              </p>
+               
+               <div className="project-links">
+          <a href="https://your-resume-builder-link.com" target="_blank">
+            Live Demo
+          </a>
+          <a href="https://github.com/asmithachandinitg/resume-builder" target="_blank">
+            GitHub
+          </a>
+        </div>
+                 <div className="exp-skills">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>GitHub</span>
+              </div>
             </div>
           </div>
         )}
