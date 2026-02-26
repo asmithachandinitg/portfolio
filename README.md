@@ -118,17 +118,9 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
-
-(Add your portfolio screenshots here)
-
----
-
 ## 📄 Resume
 
 You can download my resume directly from the portfolio
-or from this repository.
-
 ---
 
 ## 📬 Contact Me
