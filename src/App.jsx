@@ -572,7 +572,7 @@ function App() {
                 highlighting technical capabilities and collaboration skills.
               </p>
                 <div className="project-links">
-          <a href="https://your-portfolio-link.com" target="_blank">
+          <a href="https://portfolio-asmitha.vercel.app/" target="_blank">
             Live Demo
           </a>
           <a href="https://github.com/asmithachandinitg/portfolio" target="_blank">
@@ -610,7 +610,7 @@ function App() {
               </p>
           
              <div className="project-links">
-          <a href="https://your-video-app-link.com" target="_blank">
+          <a href="https://video-player-assignment-green.vercel.app/" target="_blank">
             Live Demo
           </a>
           <a href="https://github.com/asmithachandinitg/video-player-assignment" target="_blank">
@@ -651,7 +651,7 @@ function App() {
               </p>
                
                <div className="project-links">
-          <a href="https://your-resume-builder-link.com" target="_blank">
+          <a href="https://resume-builder-rouge-phi.vercel.app/" target="_blank">
             Live Demo
           </a>
           <a href="https://github.com/asmithachandinitg/resume-builder" target="_blank">
