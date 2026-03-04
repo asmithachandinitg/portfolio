@@ -550,6 +550,55 @@ function App() {
 
         {activeTab === "projects" && (
           <div id="projects" className="timeline">
+
+            <div className="timeline-item">
+              <h4>Lifora – Personal Life Management App</h4>
+              <p className="role">Full Stack · In Development</p>
+
+              <p className="desc">
+                Building a modular full-stack personal life management platform
+                from scratch using Angular and Node.js — covering health, habits,
+                productivity, finance, and lifestyle tracking in one unified app.
+              </p>
+
+              <p className="desc">
+                Designed and implemented a feature-based Angular architecture
+                with 18 modules (fitness, diary, mood, period, pregnancy, travel,
+                expenses and more), each with its own component, model, and service.
+              </p>
+
+              <p className="desc">
+                Built a complete REST API backend with JWT authentication,
+                bcrypt password hashing, and MongoDB — with module-level access
+                control and per-user profile settings.
+              </p>
+
+              <p className="desc">
+                Implemented global HTTP interceptors for auth token injection,
+                error handling, and loading states — keeping all modules clean
+                and consistent.
+              </p>
+
+              <div className="project-links">
+                <a href="https://github.com/asmithachandinitg/lifora" target="_blank">
+                  GitHub — Frontend
+                </a>
+                <a href="https://github.com/asmithachandinitg/lifora-backend" target="_blank">
+                  GitHub — Backend
+                </a>
+              </div>
+
+              <div className="exp-skills">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>JWT</span>
+                <span>REST API</span>
+              </div>
+            </div>
+
             <div
               className="timeline-item"
             >
