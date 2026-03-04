@@ -18,6 +18,9 @@ import {
   SiElastic,
   SiTailwindcss,
   SiPostman,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
 } from "react-icons/si";
 
 function App() {
@@ -98,44 +101,53 @@ function App() {
   /* TAB SWITCH */
   const [activeTab, setActiveTab] = useState("experience");
 
+  /* MOBILE MENU */
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  /* SCROLL TO TOP */
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const handleScrollTop = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", handleScrollTop);
+    return () => window.removeEventListener("scroll", handleScrollTop);
+  }, []);
+
   return (
     <div>
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="nav-logo">
-          {" "}
           <img src="/ac.png" alt="profile" className="about-photo" /> Asmitha
           Chandini
         </div>
 
-        <ul className="nav-links">
+        {/* HAMBURGER */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className={menuOpen ? "bar open" : "bar"}></span>
+          <span className={menuOpen ? "bar open" : "bar"}></span>
+          <span className={menuOpen ? "bar open" : "bar"}></span>
+        </div>
+
+        <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
           <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience" onClick={() => setActiveTab("experience")}>
+            <a href="#experience" onClick={() => { setActiveTab("experience"); setMenuOpen(false); }}>
               Experience
             </a>
           </li>
           <li>
-            <a href="#education" onClick={() => setActiveTab("education")}>
+            <a href="#experience" onClick={() => { setActiveTab("education"); setMenuOpen(false); }}>
               Education
             </a>
           </li>
           <li>
-            <a href="#projects" onClick={() => setActiveTab("projects")}>
+            <a href="#experience" onClick={() => { setActiveTab("projects"); setMenuOpen(false); }}>
               Projects
             </a>
           </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
         </ul>
       </nav>
 
@@ -260,7 +272,8 @@ function App() {
 
           {/* ===== RIGHT CONTENT ===== */}
           <div className="about-right">
-            {/* BIO */}
+            {/* GREETING + BIO */}
+            <p className="about-greeting">{greeting} 👋</p>
             <p className="about-bio">
               Frontend Developer with 3+ years of experience building scalable
               enterprise dashboards and forecasting platforms. Specialized in
@@ -291,15 +304,7 @@ function App() {
               </div>
             </div>
 
-            {/* TECH BADGES */}
-            <div className="about-tech">
-              {/* <span>React</span>
-        <span>Angular</span>
-        <span>TypeScript</span>
-        <span>D3.js</span>
-        <span>Java</span>
-        <span>Spring Boot</span> */}
-            </div>
+
           </div>
         </div>
       </section>
@@ -581,10 +586,10 @@ function App() {
 
               <div className="project-links">
                 <a href="https://github.com/asmithachandinitg/lifora" target="_blank">
-                  GitHub — Frontend
+                GitHub - Frontend
                 </a>
                 <a href="https://github.com/asmithachandinitg/lifora-backend" target="_blank">
-                  GitHub — Backend
+                 GitHub - Backend
                 </a>
               </div>
 
@@ -853,6 +858,39 @@ function App() {
             <SiPostman className="icon postman" />
             <h3>Postman</h3>
           </a>
+
+          <a
+            href="https://nodejs.org"
+            target="_blank"
+            rel="noreferrer"
+            className="skill-card"
+            data-tooltip="Node.js Runtime"
+          >
+            <SiNodedotjs className="icon node" />
+            <h3>Node.js</h3>
+          </a>
+
+          <a
+            href="https://expressjs.com"
+            target="_blank"
+            rel="noreferrer"
+            className="skill-card"
+            data-tooltip="Express Framework"
+          >
+            <SiExpress className="icon express" />
+            <h3>Express.js</h3>
+          </a>
+
+          <a
+            href="https://www.mongodb.com"
+            target="_blank"
+            rel="noreferrer"
+            className="skill-card"
+            data-tooltip="MongoDB Database"
+          >
+            <SiMongodb className="icon mongo" />
+            <h3>MongoDB</h3>
+          </a>
         </div>
       </section>
 
@@ -863,7 +901,7 @@ function App() {
           <img src="/profile.png" className="contact-photo" alt="profile" />
 
           <h2>Asmitha Chandini</h2>
-          <p className="contact-roles">Frontend Developer</p>
+          <p className="contact-roles">Frontend & Full Stack Developer</p>
 
           <p className="email">
             Email me at:
@@ -900,6 +938,18 @@ function App() {
           © 2026 Asmitha Chandini. All Rights Reserved.
         </footer>
       </section>
+
+      {/* SCROLL TO TOP */}
+      {showTop && (
+        <button
+          className="scroll-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
+
     </div>
   );
 }

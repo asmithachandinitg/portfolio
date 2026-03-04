@@ -1177,3 +1177,117 @@ section {
   text-decoration: none;
   font-weight: 600;
 }
+/* ========================= */
+/* HAMBURGER MENU */
+/* ========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.bar {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  border-radius: 2px;
+  transition: 0.3s ease;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 10px 0 20px;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* SCROLL TO TOP BUTTON */
+/* ========================= */
+
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #b57cff;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(181, 124, 255, 0.4);
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(181, 124, 255, 0.55);
+}
+
+/* ========================= */
+/* NEW SKILL ICON COLORS */
+/* ========================= */
+
+.icon.node    { color: #68a063; }
+.icon.express { color: #555555; }
+.icon.mongo   { color: #47a248; }
+
+/* ========================= */
+/* ABOUT GREETING */
+/* ========================= */
+
+.about-greeting {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
